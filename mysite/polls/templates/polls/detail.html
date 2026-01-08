@@ -1,0 +1,11 @@
+{% extends "polls/base.html" %}
+{% block header %}
+    <h2>Detail</h2>
+{% endblock %}
+{% block main %}
+    {% if resposta %}
+        <p>{{ resposta.questao }}</p>
+    {% else %}
+        <p> Error de contexto!</p>
+    {% endif %}
+{% endblock %}

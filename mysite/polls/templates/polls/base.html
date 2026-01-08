@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <title>Polls</title>
+    </head>
+    <body>
+        <header style="background: #f2f2f2; font-family: sans-serif, system-ui;">
+            {% block header %}
+            {% endblock %}
+        </header>
+        <main style="font-family: sans-serif, system-ui;">
+            {% block main %}
+            {% endblock %}
+        </main>
+        <footer style="font-family: sans-serif, system-ui;">
+            <p> 
+                <small>
+                    Todos Direitos reselvado!
+                </small>
+            </p>
+        </footer>
+    </body>
+</html>

@@ -3,7 +3,7 @@ import datetime
 from django.utils import timezone
 
 class Question(models.Model):
-    questão = models.CharField(max_length=200)
+    questao = models.CharField(max_length=200)
     pub_date = models.DateTimeField("Data da publicação")
 
     def was_published_recently(self):
@@ -12,7 +12,7 @@ class Question(models.Model):
         return self.questão
 
 class Choice(models.Model):
-    questão = models.ForeignKey(Question, on_delete=models.CASCADE)
+    questao = models.ForeignKey(Question, on_delete=models.CASCADE)
     escolha = models.CharField(max_length=200)
     votos = models.IntegerField(default=0)
 
