@@ -9,7 +9,7 @@
         <ul>
             {% for questao in lista %}
             <li>
-                <a href="/polls/{{ questao.id }}">
+                <a href="{% url 'detalhe' questao.id %}">
                     {{ questao.questao }}
                 </a>
             </li>
