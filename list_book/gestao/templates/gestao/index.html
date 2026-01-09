@@ -1,0 +1,23 @@
+{% extends "gestao/base.html" %}
+
+{% block head %}
+    <h2>Lista de Livros Registrados</h2>
+{% endblock %}
+
+{% block main %}
+    <div>
+        {% if book %}
+        {% for b in book  %}
+        <div style="background-color: #c0c0c0; padding: 10px 5px;" >
+            <p> <strong>Autor:</strong> {{ b.autor }}</p>
+            <p> <strong>Titulo:</strong>  {{ b.titulo }}</p>
+            <p> <strong>ISBN:</strong> {{ b.isbn }}</p>
+            <p> <strong>Sinopse:</strong> {{ b.sinopse }}</p>
+            <p> <strong>Editora:</strong> {{ b.editora }}</p>
+        </div>
+       {% endfor %}
+            {% else %}
+            <p style="color: red;">Lista de livros vazia</p>
+        {% endif %}
+    </div>
+{% endblock %}
